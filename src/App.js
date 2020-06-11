@@ -18,24 +18,23 @@ class App extends Component {
   }
 
   render() {
-    // debugger;
+    console.log(this.props)
     return (
       <div className="App">
+          <button onClick={() => this.handleOnClickUsers()}>
+            Click to change users count
+            </button>
           <button onClick={() => this.handleOnClickItems()}>
             Click to change items count
-            </button>
-          <button onClick={() => this.handleOnClickUsers()}>
-            Click to change user count
           </button>
-          <p>{this.props.items.length}</p>
+          <p>Users Count: {this.props.users.length} | Items Count: {this.props.items.length}</p>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  debugger;
-  return { items: state.items }
+  return { items: state.items, users: state.users }
 }
 
 export default connect(mapStateToProps)(App);

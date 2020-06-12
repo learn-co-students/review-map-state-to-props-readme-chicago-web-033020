@@ -1,8 +1,4 @@
-export default function shoppingListItemReducer(state = {
-  items: [], 
-  users: [ 'initial user' ]
-}, action) {
-
+export default function shoppingListItemReducer(state = { items: [], users: [ 'initial user' ] }, action) {
   switch(action.type) {
 
     case 'GET_COUNT_OF_ITEMS':
